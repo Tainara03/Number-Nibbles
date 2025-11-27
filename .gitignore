@@ -1,0 +1,19 @@
+# Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uilds/
+/Logs/
+/UserSettings/
+
+# Outros arquivos de build/configurações
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+
+# Pastas Específicas do Projeto
+/.utmp/
+Packages/*.tgz
+/QCAR/
