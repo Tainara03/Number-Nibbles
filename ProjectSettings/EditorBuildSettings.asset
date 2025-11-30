@@ -9,8 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/ARScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7e829a428d0fdf443aa3b00c396099a8, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1b6e16e1dd5bed64e8ce9008e794409d, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: eeba7e3c957b87a4196ebfd2e87b09b9, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1620b34f5532f504aaddfeff6f7b67dd, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c6886d958076e424795acfbcbb163d52, type: 2}
   m_UseUCBPForAssetBundles: 0

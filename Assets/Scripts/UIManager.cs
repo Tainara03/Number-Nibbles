@@ -5,8 +5,8 @@ public class UIManager : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject gamePanel;
     public GameObject creditsPanel;
+    public CupcakeMathManager cupcakeMathManager;
 
-    // Mostrar painel de créditos
     public void ShowCredits()
     {
         mainMenuPanel.SetActive(false);
@@ -14,19 +14,27 @@ public class UIManager : MonoBehaviour
         creditsPanel.SetActive(true);
     }
 
-    // Voltar para o menu principal
     public void ShowMainMenu()
     {
+        cupcakeMathManager.ResetGame();
         creditsPanel.SetActive(false);
         gamePanel.SetActive(false);
         mainMenuPanel.SetActive(true);
     }
 
-    // Começar o jogo
     public void StartGame()
     {
         mainMenuPanel.SetActive(false);
         creditsPanel.SetActive(false);
         gamePanel.SetActive(true);
+    }
+
+    public void ExitGame()
+    {
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        Application.Quit();
+        #endif
     }
 }

@@ -2,15 +2,52 @@ using UnityEngine;
 
 public class CreditsScroll : MonoBehaviour
 {
-    public float speed = 0.08f; // velocidade da rolagem
+    public float speed = 80f; 
+    public float pauseTime = 0.3f; 
+
+    private RectTransform rectTransform;
+    private float panelHeight;
+    private float textHeight;
+    private float pauseTimer = 0f;
+    private bool isPaused = false;
+
+    void Start()
+    {
+        rectTransform = GetComponent<RectTransform>();
+
+        if (transform.parent != null)
+        {
+            RectTransform parentRect = transform.parent.GetComponent<RectTransform>();
+            if (parentRect != null)
+            {
+                panelHeight = parentRect.rect.height;
+            }
+        }
+
+        textHeight = rectTransform.rect.height;
+
+        rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, -panelHeight);
+    }
 
     void Update()
     {
-        // Move o texto para cima
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        if (isPaused)
+        {
+            pauseTimer += Time.deltaTime;
+            if (pauseTimer >= pauseTime)
+            {
+                rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, -panelHeight);
+                pauseTimer = 0f;
+                isPaused = false;
+            }
+            return;
+        }
 
-        if (transform.localPosition.y > 1000f) // ajuste conforme o tamanho
-            transform.localPosition = new Vector3(transform.localPosition.x, -500f, transform.localPosition.z);
+        rectTransform.anchoredPosition += Vector2.up * speed * Time.deltaTime;
 
+        if (rectTransform.anchoredPosition.y >= textHeight + panelHeight)
+        {
+            isPaused = true;
+        }
     }
 }
