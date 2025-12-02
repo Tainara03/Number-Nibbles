@@ -1,4 +1,4 @@
-<img width="1618" height="377" alt="image" src="https://github.com/user-attachments/assets/14145bb1-0e51-4fbc-b961-5c37d71c4bfd" />## Unifesp - Universidade Federal de São Paulo
+## Unifesp - Universidade Federal de São Paulo
 ### Realidade Virtual e Aumentada N - prof. Ezequiel
 ```
 Projeto Final: Number Nibbles
