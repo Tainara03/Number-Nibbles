@@ -15,17 +15,18 @@ Por Giovanna Souza, Pedro Henrique Tamashiro e Tainara Santos
 <img width="280" height="309" alt="9f18c13e-d633-45fd-a077-19b8d071281a" src="https://github.com/user-attachments/assets/3f52a8be-a01d-401f-83d0-5d09ba9dcdd5"/> <img width="707" height="319" alt="Untitledvvvvv" src="https://github.com/user-attachments/assets/ed67881d-a710-4b08-977a-e195d7aa45b7"/> 
 </div>
 
-
-##**Ferramentas utilizadas no desenvolvimento do projeto:**
+<div align = "left">
+**Ferramentas utilizadas no desenvolvimento do projeto:**
 >Unity
 >Blender
 >Inkscape — logo
 >Modelos 3D gratuitos
 
-##**Pacotes:**
+**Pacotes:**
 >AR Foundation
 >ARCore XR Plugin (Android)
-  
+</div>
+
 <img width="600" height="400" alt="image (8)" src="https://github.com/user-attachments/assets/2e7313a6-cfaf-41a1-a89d-f11e28c8162a" />
 
 ### [Acessar vídeo](https://youtu.be/nTl2dQbNK1s)
