@@ -18,14 +18,14 @@ Por Giovanna Souza, Pedro Henrique Tamashiro e Tainara Santos
 
 ```
 Ferramentas utilizadas no desenvolvimento do projeto:
- + Unity
- + Blender
- + Inkscape - logo
- + Modelos 3D gratuitos
+- Unity
+- Blender
+- Inkscape - logo
+- Modelos 3D gratuitos
 
  Pacotes:
- + AR Foundation
- + ARCore XR Plugin (Android)
+- AR Foundation
+- ARCore XR Plugin (Android)
  ```
 
 
