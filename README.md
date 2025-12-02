@@ -17,17 +17,17 @@ Por Giovanna Souza, Pedro Henrique Tamashiro e Tainara Santos
 
 
 
-
+```
 Ferramentas utilizadas no desenvolvimento do projeto:
-+Unity
-+Blender
-+Inkscape - logo
-+Modelos 3D gratuitos
+-Unity
+-Blender
+-Inkscape - logo
+-Modelos 3D gratuitos
 
 Pacotes:
-+AR Foundation
-+ARCore XR Plugin (Android)
-  
+-AR Foundation
+-ARCore XR Plugin (Android)
+```  
 
 
 <img width="600" height="400" alt="image (8)" src="https://github.com/user-attachments/assets/2e7313a6-cfaf-41a1-a89d-f11e28c8162a" />
