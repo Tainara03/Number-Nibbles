@@ -16,7 +16,7 @@ Por Giovanna Souza, Pedro Henrique Tamashiro e Tainara Santos
 </div>
 
 
-<div align = "center">
+
 ```
 Ferramentas utilizadas no desenvolvimento do projeto:
 - Unity
