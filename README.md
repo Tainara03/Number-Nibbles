@@ -9,7 +9,8 @@ Por Giovanna Souza, Pedro Henrique Tamashiro e Tainara Santos
 
 > _Number Nibbles_ é um jogo educativo e divertido que promove o aprendizado de matemática de forma lúdica. Voltado para o público infantil, tem como proposta trazer problemas de soma, subtração, divisão e multiplicação usando alimentos,  
 
-[![Watch the video](https://img.youtu.be/nTl2dQbNK1s.jpg)]
+[![Watch the video](<img width="1916" height="940" alt="image (8)" src="https://github.com/user-attachments/assets/2e7313a6-cfaf-41a1-a89d-f11e28c8162a" />)]
 (https://youtu.be/nTl2dQbNK1s)
 
 ### [Full video](https://youtu.be/nTl2dQbNK1s)
+
