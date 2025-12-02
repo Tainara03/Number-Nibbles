@@ -11,5 +11,6 @@ Por Giovanna Souza, Pedro Henrique Tamashiro e Tainara Santos
 
 
 <img width="1916" height="940" alt="image (8)" src="https://github.com/user-attachments/assets/2e7313a6-cfaf-41a1-a89d-f11e28c8162a" />
+
 ### [Full video](https://youtu.be/nTl2dQbNK1s)
 
