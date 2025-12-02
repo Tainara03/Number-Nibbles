@@ -12,8 +12,7 @@ Por Giovanna Souza, Pedro Henrique Tamashiro e Tainara Santos
 > O ambiente virtual, que também oferece a possibilidade de realidade aumentada reforça a aprendizagem por tentativa e erro e ajuda o usuário a manter o foco por mais tempo com cores chamativas e interface amigável, algo essencial na faixa etária de desenvolvimento de crianças. 
 
 <div>
-<img width="280" height="309" alt="9f18c13e-d633-45fd-a077-19b8d071281a" src="https://github.com/user-attachments/assets/3f52a8be-a01d-401f-83d0-5d09ba9dcdd5"/>
-<img width="707" height="319" alt="Untitledvvvvv" src="https://github.com/user-attachments/assets/ed67881d-a710-4b08-977a-e195d7aa45b7"/> 
+<img width="280" height="309" alt="9f18c13e-d633-45fd-a077-19b8d071281a" src="https://github.com/user-attachments/assets/3f52a8be-a01d-401f-83d0-5d09ba9dcdd5"/> <img width="707" height="319" alt="Untitledvvvvv" src="https://github.com/user-attachments/assets/ed67881d-a710-4b08-977a-e195d7aa45b7"/> 
 </div>
 
 ```
