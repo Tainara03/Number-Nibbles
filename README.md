@@ -18,13 +18,13 @@ Por Giovanna Souza, Pedro Henrique Tamashiro e Tainara Santos
 <div align = "left">
   
 ## Ferramentas utilizadas no desenvolvimento do projeto:
-> Unity 
-> Blender
-> Inkscape — logo 
+> Unity,  
+> Blender, 
+> Inkscape (criação da logo) e
 > Modelos 3D gratuitos
 
 ## Pacotes:
-> AR Foundation
+> AR Foundation e
 > ARCore XR Plugin (Android)
 </div>
 
