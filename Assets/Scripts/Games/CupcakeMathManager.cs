@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CupcakeMathManager : MonoBehaviour
 {
@@ -31,8 +32,8 @@ public class CupcakeMathManager : MonoBehaviour
 
     void Start()
     {
-        if(resultPlate != null && resultPlate.cupcakesOnPlate == null)
-            resultPlate.cupcakesOnPlate = new System.Collections.Generic.List<GameObject>();
+        if (resultPlate != null && resultPlate.cupcakesOnPlate == null)
+            resultPlate.cupcakesOnPlate = new List<GameObject>();
 
         GenerateNewProblem();
 
@@ -52,35 +53,35 @@ public class CupcakeMathManager : MonoBehaviour
         successMessagePanel.SetActive(false);
         scoredThisRound = false;
 
-        foreach(GameObject cupcake in allCupcakes)
+        foreach (GameObject cupcake in allCupcakes)
         {
-            DraggableItem3D d = cupcake.GetComponent<DraggableItem3D>();
-            if(d != null)
+            DraggableItemMobileAR d = cupcake.GetComponent<DraggableItemMobileAR>();
+            if (d != null)
             {
                 cupcake.transform.position = d.initialPosition;
                 cupcake.transform.localScale = d.initialScale;
             }
         }
 
-        if(resultPlate != null)
+        if (resultPlate != null)
             resultPlate.cupcakesOnPlate.Clear();
 
         currentOp = (Operation)Random.Range(0, 3);
         bool valid = false;
 
-        while(!valid)
+        while (!valid)
         {
             factorA = Random.Range(1, 13);
             factorB = Random.Range(1, 13);
 
-            switch(currentOp)
+            switch (currentOp)
             {
                 case Operation.Addition:
                     targetResult = factorA + factorB;
                     valid = targetResult <= 12;
                     break;
                 case Operation.Subtraction:
-                    if(factorA < factorB) { int tmp = factorA; factorA = factorB; factorB = tmp; }
+                    if (factorA < factorB) { int tmp = factorA; factorA = factorB; factorB = tmp; }
                     targetResult = factorA - factorB;
                     valid = targetResult >= 0 && targetResult <= 12;
                     break;
@@ -91,7 +92,7 @@ public class CupcakeMathManager : MonoBehaviour
             }
         }
 
-        switch(currentOp)
+        switch (currentOp)
         {
             case Operation.Addition: equationText.text = $"{factorA} + {factorB} = ?"; break;
             case Operation.Subtraction: equationText.text = $"{factorA} - {factorB} = ?"; break;
@@ -104,7 +105,7 @@ public class CupcakeMathManager : MonoBehaviour
     public void UpdateCountDisplay()
     {
         int total = 0;
-        if(resultPlate != null && resultPlate.cupcakesOnPlate != null)
+        if (resultPlate != null && resultPlate.cupcakesOnPlate != null)
             total = resultPlate.cupcakesOnPlate.Count;
 
         countDisplay.text = $"Total: {total}";
@@ -112,15 +113,15 @@ public class CupcakeMathManager : MonoBehaviour
 
     private void UpdateScoreDisplay()
     {
-        if(scoreText != null)
+        if (scoreText != null)
             scoreText.text = $"Score: {score}";
     }
 
     private void CheckResult()
     {
-        if(resultPlate != null && resultPlate.cupcakesOnPlate != null)
+        if (resultPlate != null && resultPlate.cupcakesOnPlate != null)
         {
-            if(resultPlate.cupcakesOnPlate.Count == targetResult && !scoredThisRound)
+            if (resultPlate.cupcakesOnPlate.Count == targetResult && !scoredThisRound)
             {
                 scoredThisRound = true;
                 score++;
@@ -131,7 +132,7 @@ public class CupcakeMathManager : MonoBehaviour
 
                 StartCoroutine(NextPhaseAfterDelay(2f));
             }
-            else if(!scoredThisRound)
+            else if (!scoredThisRound)
             {
                 resultMessageText.text = $"Try Again!";
                 successMessagePanel.SetActive(true);
@@ -160,8 +161,24 @@ public class CupcakeMathManager : MonoBehaviour
 
     public void ResetGame()
     {
-        score = 0;             
+        score = 0;
         UpdateScoreDisplay();
         GenerateNewProblem();
+    }
+
+    public void TrySnapToPlate(GameObject cupcake)
+    {
+        if (resultPlate == null) return;
+
+        float snapDistance = 1.5f;
+        if (Vector3.Distance(cupcake.transform.position, resultPlate.transform.position) < snapDistance)
+        {
+            cupcake.transform.position = resultPlate.transform.position + Vector3.up * 0.05f;
+
+            if (!resultPlate.cupcakesOnPlate.Contains(cupcake))
+                resultPlate.cupcakesOnPlate.Add(cupcake);
+
+            UpdateCountDisplay();
+        }
     }
 }

@@ -2,18 +2,34 @@ using UnityEngine;
 
 public class GyroCamera : MonoBehaviour
 {
+    private Gyroscope gyro;
+    private bool gyroEnabled = false;
+    private Quaternion rotationFix;
+
     void Start()
     {
-        Input.gyro.enabled = true;
+        gyroEnabled = EnableGyro();
+    }
+
+    bool EnableGyro()
+    {
+        if (SystemInfo.supportsGyroscope)
+        {
+            gyro = Input.gyro;
+            gyro.enabled = true;
+
+            rotationFix = Quaternion.Euler(90f, 0f, -90f);
+
+            return true;
+        }
+
+        return false;
     }
 
     void Update()
     {
-        transform.localRotation = GyroToUnity(Input.gyro.attitude);
-    }
+        if (!gyroEnabled) return;
 
-    private static Quaternion GyroToUnity(Quaternion q)
-    {
-        return new Quaternion(q.x, q.y, -q.z, -q.w);
+        transform.localRotation = rotationFix * gyro.attitude;
     }
 }
