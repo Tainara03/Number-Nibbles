@@ -4,6 +4,7 @@
 Projeto Final: Number Nibbles
 Por Giovanna Souza, Pedro Henrique Tamashiro e Tainara Santos
 ````
+<!-- no space -->
 <div align = "center" style="margin-top:-20">
 <img width="400" height="500" alt="NumberNibblesLogo" src="https://github.com/user-attachments/assets/e3a0d365-9830-4aad-b530-ed43408d6724" />
 
